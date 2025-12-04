@@ -1,0 +1,11 @@
+import itertools
+
+qw = input("Введите числа через пробел: ")
+liist = qw.split()
+
+permlist = list(itertools.permutations(liist))
+llist = []
+for p in permlist:
+    llist.append(list(p))
+
+print(llist)
