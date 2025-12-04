@@ -1,0 +1,20 @@
+def Permu(lst):
+    if len(lst) == 0:
+        return [[]]
+    else:
+        res = []
+        for i in range(len(lst)):
+            rest = lst[:i] + lst[i+1:]
+            for p in Permutacii(rest):
+                res.append([lst[i]] + p)
+        return res
+
+def main():
+    qw = input("Введите числа через пробел: ")
+    lst = [int(x) for x in qw.split()]
+    perms = Permutacii(lst)
+    for p in perms:
+        print(p)
+
+if __name__ == "__main__":
+    main()

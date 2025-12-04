@@ -1,0 +1,13 @@
+def NOD(x,y):            
+    if y == 0:
+        return x
+    else:
+        return NOD(y, x % y)
+
+def main():                       
+    x = int(input('Введите 1 число: '))
+    y = int(input('Введите 2 число: '))
+    print('nod :', NOD(x, y))
+
+if __name__ == "__main__":         
+    main()

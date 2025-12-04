@@ -1,0 +1,17 @@
+def Pascalchik(o):             
+    if o == 0:
+        return [1]
+    else:
+        ryad = [1]
+        ischo_ryad = Pascalchik(o - 1)
+        for i in range(len(ischo_ryad) - 1):
+            ryad.append(ischo_ryad[i] + ischo_ryad[i + 1])    
+        ryad.append(1)
+        return ryad
+def main():                                     
+    o = int(input('Введите число: '))
+    for i in range(o):
+        print(Pascalchik(i))
+
+if __name__ == "__main__":                         
+    main()
